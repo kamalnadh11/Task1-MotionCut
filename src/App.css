@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+header{
+  background-image: url(./images/a10.jpg);
+  background-size: cover;
+  padding: 5px;
+  margin: 2px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul{
+  display: flex;
+  list-style: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav li{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  font-size: 25px;
+  margin-right: 20px;
+  
+}
+nav a{
+  color: white;
+  font-size: 25px;
+  
+}
+#logo{
+  height: 50px;
+  width: 50px;
+}
+.scart{
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+.cart-item-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%; 
+  padding: 5px 10px; 
+  font-size: 1rem;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 100%;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cardc{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.cardc1{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 2px;
+  background-color: lightgray;
+}
+.cimg{
+  width: 300px;
+  height: auto;
+  padding: 20px;
+}
+.cardc2{
+  flex: 1;
+}
+.simg{
+  max-width: 100%;
+  max-height: 400px;
+  border: 2px solid green;
+}
+.ac{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 5px;
+  background-color: beige;
+}
+.pc{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 5px;
+  justify-items: center;
+  background-color: lightsalmon;
+  
+}
+.pc1{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 5px;
+  height: 300px;
+  width: 400px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  background-color: lightgreen;
+}
+.pc1:hover{
+  background-color: lightseagreen;
+  transform: scale(1.05);
+}
+.pc img{
+  height: 200px;
+  width: 400px;
+}
+.pc button{
+  background-color: darkmagenta;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pc button:hover{
+  background-color: yellow;
+  color: black;
+  border: 2px solid black;
+  border-radius: 20px;
+  transform: scale(1.05);
 }

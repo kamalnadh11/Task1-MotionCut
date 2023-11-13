@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './header';
+import Home from './home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import About from './about';
+import Contact from './contact';
+import Product from './product';
+import { useState } from 'react';
 
 function App() {
+  const [cartItemCount, setCartItemCount] = useState(0);
+
+  const handleAddToCart = () => {
+    setCartItemCount(cartItemCount + 1);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Header cartItemCount={cartItemCount}/>
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/product" element={<Product cartItemCount={cartItemCount} onAddToCart={handleAddToCart} />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
